@@ -1,5 +1,10 @@
 package com.tmybatis.member.controller;
 
+import java.io.IOException;
+
+import com.tmybatis.member.model.service.MemberService;
+import com.tmybatis.member.model.vo.Member;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,10 +13,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-import java.io.IOException;
-
-import com.tmybatis.member.model.service.MemberService;
-import com.tmybatis.member.model.vo.Member;
 
 /**
  * Servlet implementation class LoginServlet
@@ -52,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 			response.sendRedirect("/"); // sendRedirect() 메소드 호출
 		}else {
 			// 로그인 실패.. -> error.jsp로 이동
-			request.getRequestDispatcher("/WEB-INF/views/common/error.jsp")
+			request.getRequestDispatcher("/WEB-INF/views/common/error/error.jsp")
 			.forward(request, response);
 		}
 	}

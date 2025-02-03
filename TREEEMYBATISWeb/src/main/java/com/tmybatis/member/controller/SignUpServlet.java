@@ -58,7 +58,7 @@ public class SignUpServlet extends HttpServlet {
 				response.sendRedirect("/member/login"); // get요청 -> doGet이 동작할거임.
 			}else {
 				// 회원실패 -> 에러페이지로 이동(/WEB-INF/views/common/error/error.jsp)
-				request.getRequestDispatcher("/WEB-INF/views/common/error.jsp")
+				request.getRequestDispatcher("/WEB-INF/views/common/error/error.jsp")
 				.forward(request, response);
 			}
 			

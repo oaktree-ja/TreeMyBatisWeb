@@ -44,6 +44,15 @@ public class Member {
 		this.hobby = hobby;
 	}
 
+	public Member(String memberId, String email, String phone, String address, String hobby) {
+		super();
+		this.memberId = memberId;
+		this.email = email;
+		this.phone = phone;
+		this.address = address;
+		this.hobby = hobby;
+	}
+
 	/**
 	 * @return the memberId
 	 */

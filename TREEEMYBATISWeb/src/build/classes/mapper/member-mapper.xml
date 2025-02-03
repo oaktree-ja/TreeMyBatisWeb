@@ -21,22 +21,8 @@
   	SELECT *FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId} AND MEMBER_PWD=#{memberPwd}
   	</select>
   	
-  		<select id ="selectOneById" resultMap="memberResultMap">
-  	SELECT *FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId}
-  	</select>
-  	
   	<insert id="insertMember">
   		INSERT INTO MEMBER_TBL VALUES(#{memberId},#{memberPwd},#{memberName},#{gender},#{age},#{email},#{phone},#{address},#{hobby},DEFAULT)
-  	</insert>
-  	
-  	<insert id="updateMember">
-  		UPDATE MEMBER_TBL 
-SET EMAIL = #{email}, PHONE = #{phone}, ADDRESS = #{address}, HOBBY = #{hobby} 
-WHERE MEMBER_ID = #{memberId}
-  	</insert>
-  	
-  	<insert id="deleteMember">
-  		DELETE FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId}
   	</insert>
   
   </mapper>
