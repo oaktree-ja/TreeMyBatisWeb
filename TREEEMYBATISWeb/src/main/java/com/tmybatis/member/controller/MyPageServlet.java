@@ -33,7 +33,11 @@ public class MyPageServlet extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberService mService = new MemberService();
+		//HttpSession 객체를 가져옴
 		HttpSession session = request.getSession();
+		//세션에 저장된 정보를 가져와야함 getAttribute() 를 사용
+		//getAttribute() 는 object로 받음 
+		Object obj = session.getAttribute("result");
 		Member searchOne = (Member)session.getAttribute("result");
 		if(searchOne != null) {
 			String memberId = searchOne.getMemberId();
